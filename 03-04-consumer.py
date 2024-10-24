@@ -21,6 +21,7 @@ def consumer():
         data = work["num"]
         result = {'consumer': consumer_id, 'num': data}
         if data%2 == 0:
+            print("[INFO] Sending ")
             consumer_sender.send_json(result)
             
 if __name__ == "__main__":
